@@ -1,0 +1,10 @@
+framwork : 
+javac -d out -cp /home/diary/Documents/L2/tomcat/apache-tomcat-9.0.82/lib/servlet-api.jar src/com/myframework/*.java
+
+jar cf framwork.jar -C out .
+
+test : 
+javac -d WEB-INF/classes -cp "/home/diary/Documents/L2/tomcat/apache-tomcat-9.0.82/lib/servlet-api.jar:WEB-INF/lib/*" src/com/example/HelloServlet.java
+
+jar cvf MyServletApp.war *
+mv Myservlet.war /home/diary/Documents/L2/tomcat/apache-tomcat-9.0.82/webapps
